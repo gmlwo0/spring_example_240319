@@ -16,6 +16,7 @@ public class UsedGoods {
 	private LocalDateTime createdAt;
 	
 	
+	
 	// 메소드
 	public int getId() {
 		return id;
