@@ -4,11 +4,11 @@
  
  <mapper namespace="com.example.lesson04.mapper.StudentMapper">
  	
- 	<insert id="insertStudent" parameterType="com.example.lesson04.domain.Student">
+ 	<insert id="insertStudent" parameterType="com.example.lesson04.domain.Student"
+ 	useGeneratedKeys="true" keyProperty="id">
  		INSERT INTO `new_student`
- 		(
-			`id`
-			,`name`
+ 		(	
+			`name`
 			,`phoneNumber`
 			,`email`
 			,`dreamJob`
@@ -27,4 +27,18 @@
 
  	</insert>
  	
+ 	<select id="selectStudentById" parameterType="int" resultType="com.example.lesson04.domain.Student">
+		SELECT
+			`id`
+			,`name`
+			,`phoneNumber`
+			,`email`
+			,`dreamJob`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`new_student`
+		WHERE 
+			`id` =#{id}
+	</select>
  </mapper>
