@@ -18,6 +18,7 @@ public class Lesson04Ex01Controller {
 	
 	@Autowired
 	private UserBO userBO;
+	
 	// 회원가입 화면
 	// http://localhost/lesson04/ex01/add-user-view
 	@RequestMapping(path = "/add-user-view", method = RequestMethod.GET)
