@@ -29,4 +29,9 @@ public class UserBO {
 		return userMapper.selectLatesUser();
 	}
 
+	//  input: name
+	// output: boolean
+	public boolean isDuplicationByName(String name) {
+		userMapper.isDuplicationByName(name);
+	}
 }
