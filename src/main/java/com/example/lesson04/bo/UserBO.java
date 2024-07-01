@@ -8,30 +8,27 @@ import com.example.lesson04.mapper.UserMapper;
 
 @Service
 public class UserBO {
-	
+
 	@Autowired
 	private UserMapper userMapper;
 	
-	
-	//  input: 파라미터 4개
+	// input: 파라미터 4개
 	// output: X
-	
-
 	public void addUser(String name, String yyyymmdd,
 			String email, String introduce) {
 		
 		userMapper.insertUser(name, yyyymmdd, email, introduce);
 	}
 	
-	//  input: X
+	// input: X
 	// output: User
-	public User getLatesUser() {
+	public User getLatestUser() {
 		return userMapper.selectLatesUser();
 	}
-
-	//  input: name
+	
+	// input: name
 	// output: boolean
 	public boolean isDuplicationByName(String name) {
-		userMapper.isDuplicationByName(name);
+		return userMapper.isDuplicationByName(name);
 	}
 }

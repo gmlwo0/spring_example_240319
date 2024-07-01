@@ -45,6 +45,5 @@
  			`new_user`
  		WHERE
  			`name` = #{name}
- 		
  	</select>
  </mapper>
