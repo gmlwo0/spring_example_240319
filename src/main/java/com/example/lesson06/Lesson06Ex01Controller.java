@@ -31,7 +31,7 @@ public class Lesson06Ex01Controller {
 			@RequestParam("name") String name,
 			@RequestParam("yyyymmdd") String yyyymmdd,
 			@RequestParam("email") String email,
-			@RequestParam(value = "introduce",required=false) String introduce) {
+			@RequestParam(value ="introduce",required=false) String introduce) {
 		
 		// db insert
 		userBO.addUser(name,yyyymmdd,email,introduce);
