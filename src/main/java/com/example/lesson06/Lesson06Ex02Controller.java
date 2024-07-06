@@ -41,9 +41,9 @@ public class Lesson06Ex02Controller {
 		result.put("is_duplication", isDuplication);
 		return result;
 	}
-<<<<<<< HEAD
+
 }
 
-=======
-}
->>>>>>> 776f2b4 (2024-07-05 집)
+
+
+
